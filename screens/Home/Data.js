@@ -11,14 +11,14 @@ const serviceData = [
         name:"Plumber Services",
         category:"Plumber",
         numberCompany:"35",
-        bgColor: "#c51162",
+        bgColor: "blue",
        
     },
     {
         name:"Hair Dresser",
         category:"Salon",
         numberCompany:"25",
-        bgColor: "#c51162",
+        bgColor: "#aa00ff",
        
     }
 ]
