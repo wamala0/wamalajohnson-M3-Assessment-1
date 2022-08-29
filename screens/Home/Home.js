@@ -1,9 +1,10 @@
 import  React from 'react'
-import { StyleSheet, Text, View,TouchableOpacity,Dimensions,image} from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,Dimensions,Image} from 'react-native';
 import { FlatList, SafeAreaView } from 'react-native-web';
 import serviceData from './Data';
 
-const windowWidth = Dimensions.get('window').width;
+
+
 const windowHeight = Dimensions.get('window').height;
 
 
@@ -25,9 +26,11 @@ renderItem={({item}) =>{
       </Text>
       <Text>
         {item.numberCompany}
+        
       </Text>
       </View>
-      
+      <Image style={{height:90,width:90,position:'absolute',right:0,margin:10,bottom:0}}
+      source={item.image}/>
     </TouchableOpacity>
   )
 }}
