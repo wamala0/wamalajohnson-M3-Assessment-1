@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
       padding:10,
       width:"30%",
       margin:15,
-     borderRadius:10
+     borderRadius:10,
+    alignSelf:'center'
       
      },
      btnTxt: {
