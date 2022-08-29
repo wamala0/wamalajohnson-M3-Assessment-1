@@ -1,5 +1,8 @@
 import  React from 'react'
-import { StyleSheet, Text, View, TextInput,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TextInput,TouchableOpacity, Dimensions } from 'react-native';
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 import maid from '../src/maid.jpg';
 const Login = ({navigation}) => {
