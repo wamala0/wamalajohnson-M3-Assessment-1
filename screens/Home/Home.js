@@ -1,12 +1,12 @@
 import  React from 'react'
-import { StyleSheet, Text, View,TouchableOpacity,Dimensions,Image} from 'react-native';
-import { FlatList, SafeAreaView } from 'react-native-web';
+import { StyleSheet, Text, View,TouchableOpacity,Dimensions,Image,FlatList,SafeAreaView} from 'react-native';
+
 import serviceData from './Data';
 
 
 
 const windowHeight = Dimensions.get('window').height;
-
+const windowWidth = Dimensions.get('window').width;
 
 const Home= ({navigation}) => {
   return (
@@ -16,7 +16,7 @@ data={serviceData}
 contentInset={{padding:12}}
 renderItem={({item}) =>{
   return(
-    <TouchableOpacity style={{margin:10, height:windowHeight*0.2,backgroundColor:item.bgColor,borderRadius:10}}>
+    <TouchableOpacity onPress ={() => navigation.navigate('Detail')} style={{margin:10, height:windowHeight*0.2,backgroundColor:item.bgColor,borderRadius:10}}>
       <View style={{backgroundColor:item.bgColor}}>
       <Text style={styles.category}>
         {item.category}
@@ -36,13 +36,6 @@ renderItem={({item}) =>{
 }}
 >
 </FlatList>
-<View style={styles.btnContainer}>
-     <TouchableOpacity style={styles.userBtn} onPress ={() => navigation.navigate('Details')}>
-        <Text style={styles.btnTxt}>
-            See Details Page
-        </Text>
-     </TouchableOpacity >
-     </View>
  </SafeAreaView>
   );
 };
@@ -54,25 +47,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  btnContainer: {
-    justifyContent: 'center',
-    
-    },
-    userBtn: {
-     backgroundColor:"green",
-     underlineColorAndroid:'rgba(0,0,0,0)',
-      padding:10,
-      width:"30%",
-      margin:15,
-     borderRadius:10,
-    alignSelf:'center'
-      
-     },
-     btnTxt: {
-         fontSize: 15,
-         textAlign:"center",
-         fontWeight: "bold"
-         },
+   
     category:{
        fontSize:24,
        fontWeight:200,
