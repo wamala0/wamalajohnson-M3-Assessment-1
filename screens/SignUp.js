@@ -5,7 +5,7 @@ import maid from '../src/maid.jpg';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-const Login = ({navigation}) => {
+const SignUp = ({navigation}) => {
   return (
     <View style={styles.container}>
       <div>
@@ -92,4 +92,4 @@ const styles = StyleSheet.create({
         },
 });
 
-export default Login;
+export default SignUp;
